@@ -1,0 +1,35 @@
+#input{
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 1.5rem;
+}
+
+#btn {
+    background-color: rgb(170, 170, 94);
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0px 5px;
+    color: white;
+}
+
+#shopping-list {
+    color: rgb(53, 69, 116);
+}
+
+.container {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.list-container{
+    display: flex;
+    justify-content: center;
+}
+
+.list-item{
+    color: rgb(6, 38, 40);
+}
