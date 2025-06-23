@@ -33,3 +33,7 @@
 .list-item{
     color: rgb(6, 38, 40);
 }
+
+#li-btn{
+    margin-left: 8px;
+}

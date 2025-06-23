@@ -29,23 +29,30 @@ let shoppingList = document.createElement('ul')
 shoppingList.setAttribute('id', 'shopping-list')
 
 
-let listItem = document.createElement('li')
 
 //Button function to take in input 
 // function createItem(){
-// }
-
-
-body.appendChild(container)
-body.appendChild(listContainer)
-container.appendChild(h1)
-container.appendChild(inputContainer)
-inputContainer.appendChild(inputText)
-listContainer.appendChild(shoppingList)
-inputText.appendChild(input)
-inputText.appendChild(btn)
-
-btn.addEventListener('click', () => {
-    listItem.textContent = input.value
-    input.value = ''
+    // }
+    
+    
+    body.appendChild(container)
+    body.appendChild(listContainer)
+    container.appendChild(h1)
+    container.appendChild(inputContainer)
+    inputContainer.appendChild(inputText)
+    listContainer.appendChild(shoppingList)
+    inputText.appendChild(input)
+    inputText.appendChild(btn)
+    
+    btn.addEventListener('click', () => {
+        let liSpan = document.createElement('span')
+        liBtn = document.createElement('button')
+        liBtn.textContent = 'delete'
+        liBtn.setAttribute('id','li-btn')
+        let listItem = document.createElement('li')
+        liSpan.textContent = input.value
+        input.value = ''
+        listItem.appendChild(liSpan)
+        listItem.appendChild(liBtn)
+        shoppingList.appendChild(listItem)
 })
