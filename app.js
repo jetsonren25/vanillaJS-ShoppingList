@@ -28,31 +28,33 @@ listContainer.setAttribute('class','list-container')
 let shoppingList = document.createElement('ul')
 shoppingList.setAttribute('id', 'shopping-list')
 
+body.appendChild(container)
+body.appendChild(listContainer)
+container.appendChild(h1)
+container.appendChild(inputContainer)
+inputContainer.appendChild(inputText)
+listContainer.appendChild(shoppingList)
+inputText.appendChild(input)
+inputText.appendChild(btn)
+    
+btn.addEventListener('click', () => {
+    let liSpan = document.createElement('span')
+    liBtn = document.createElement('button')
+    let listItem = document.createElement('li')
+    liBtn.setAttribute('id','li-btn')
+    liBtn.textContent = 'delete'
+    liSpan.textContent = input.value
+    input.value = ''
+    listItem.appendChild(liSpan)
+    listItem.appendChild(liBtn)
+    shoppingList.appendChild(listItem)
 
-
-//Button function to take in input 
-// function createItem(){
-    // }
-    
-    
-    body.appendChild(container)
-    body.appendChild(listContainer)
-    container.appendChild(h1)
-    container.appendChild(inputContainer)
-    inputContainer.appendChild(inputText)
-    listContainer.appendChild(shoppingList)
-    inputText.appendChild(input)
-    inputText.appendChild(btn)
-    
-    btn.addEventListener('click', () => {
-        let liSpan = document.createElement('span')
-        liBtn = document.createElement('button')
-        liBtn.textContent = 'delete'
-        liBtn.setAttribute('id','li-btn')
-        let listItem = document.createElement('li')
-        liSpan.textContent = input.value
-        input.value = ''
-        listItem.appendChild(liSpan)
-        listItem.appendChild(liBtn)
-        shoppingList.appendChild(listItem)
+    liBtn.addEventListener('click', (e) => {
+        removeItem = e.target
+        listItem.remove()
+        //this will automatically focus (go to) on the element the method is on
+        input.focus()
+    })
 })
+
+
